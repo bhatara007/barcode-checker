@@ -99,7 +99,7 @@ function App() {
           {result && <p>Result: {result}</p>}
           {evenEquation && (
             <p>
-              Even: {evenEquation} ={" "}
+              Even: ({evenEquation}) x 3 = {" "}
               {evenEquation
                 .split("+")
                 .reduce((acc, curr) => acc + parseInt(curr.trim()), 0) * 3}
