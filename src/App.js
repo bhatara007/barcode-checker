@@ -60,6 +60,7 @@ function App() {
     setOddEquation("");
     setBarcodeDigit("");
     setCheckdigit("");
+    setResult("")
   };
 
   return (
