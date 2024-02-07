@@ -64,6 +64,7 @@ function App() {
     setBarcodeDigit("");
     setCheckdigit("");
     setResult("")
+    setSumResult("")
   };
 
   return (
