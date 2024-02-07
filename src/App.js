@@ -13,6 +13,7 @@ function App() {
   const [oddEquation, setOddEquation] = useState("");
   const [barcodeDigit, setBarcodeDigit] = useState("");
   const [checkdigit, setCheckdigit] = useState("");
+  const [sumResult, setSumResult] = useState("");
 
   const onSubmit = (data) => {
     const barcode = data.barcode;
@@ -39,6 +40,8 @@ function App() {
 
     let result = even * 3 + odd;
     let count = 0;
+
+    setSumResult(result)
 
     while (result % 10 !== 0) {
       result++;
@@ -114,6 +117,7 @@ function App() {
                 .reduce((acc, curr) => acc + parseInt(curr.trim()), 0)}
             </p>
           )}
+          {sumResult && <p> Result: {sumResult} </p>}
           {barcodeDigit && <p> Barcode Digit: {barcodeDigit} </p>}
           {checkdigit && <p> Check Digit: {checkdigit} </p>}
         </div>
